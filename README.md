@@ -1,56 +1,47 @@
 The aim of tidy-uci-har is to create a tidy version of the UCI HAR dataset for the "Getting and Cleaning Data" course offered August 4-31, 2014 on Coursera.
-Files
 
-   > README.md this file, describing the overall repository.
-  > CodeBook.md the tidy data file code book for the data set produced by the tidying process.
-   > run_analysis.R the main analysis script performing the specified data tidying tasks.
-   > tidy_UCI_HAR_Dataset.txt sample output from the run_analysis.R script included in the repository for completeness. Under normal circumstances, data itself would not be part of the repository.
+###Files
 
-###  Main Script
+   1. README.md : describing the overall repository.
+   2. CodeBook.md : code book for the data set produced by the tidying process.
+   3. run_analysis.R : the main analysis script performing the specified data tidying tasks.
+   4. tidydata.txt : sample output from the run_analysis.R script included in the repository for completeness.
+	
+	
+		
+### Steps to execute files in this repo:
 
-The R script run_analysis.R downloads, if not already present, and processes the raw UCI HAR dataset as follows:
+##### Attention :
+Our code run_analysis.R does not download the file. Please do the following before running the script:
 
-    > Step 0. Download and extract the raw data set. (Not in the original specification.)
+1. Download the data folder
+2. Unzip the data folder
+3. Set the working directory of your R environment to the root directory of the extracted/unzipped file.
+   Hint: You can use setwd() to the set the working directory.
+   For example, if you download and unzip the data folder in D:/gettingdata , you should call the following:
+  
+   > setwd("D:/gettingdata/getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset")
+  
+
+4. Now download the run_analysis.R from this repo and copy paste it in your working directory which
+ you have setup in step.3
+ 
+5.  Use the script by opening an R session . Then execute the script with the R command:
+
+> source('run_analysis.R')
+
+
+ The run_analysis.R on execution does the following:
+ 
     > Step 1. Merges the training and the test sets to create one data set.
     > Step 2. Extracts only the measurements on the mean and standard deviation for each measurement.
     > Step 3. Uses descriptive activity names to name the activities in the data set.
     > Step 4. Appropriately labels the data set with descriptive variable names.
     > Step 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-### Usage
+	
+6. Our run_analysis.R contains a function called my_analysis(). Call this function after you load the script in Step.5
 
-> Use the script by opening an R session and setting your working directory to the directory containing run_analysis.R. Then execute the script with the R command:
+> my_analysis();
 
-> source('run_analysis.R')
-
-> The raw data and a tidy data set named tidy_UCI_HAR_Dataset.txt will be placed in the data subdirectory of the current working directory.
-> Customization
-
-> A few variables at the top of the script can customized at your own risk.
-
-   > dataUrl the URL of the raw UCI HAR dataset. Currently points to a cached copy provided by the course instructors.
-    > dataDir the path to the data directory for storing raw and tidy datasets. Currently points to the "data" subdirectory of the current working directory when the script is executed.
-    > rawDataFile path to the raw data file. Currently set to the name "UCI_HAR_Dataset.zip" within dataDir.
-    > rawDataDirectory path to the raw data directory unzipped from rawDataFile. Currently set to "UCI HAR Dataset" within dataDir. It is not recommended to change the name of the directory, as it needs to match the ZIP file contents.
-   > dateFile path to the file storing the download date and time for the data. Currently set to "dateDownloaded.txt" within dataDir.
-   > tidyDataFile path to the output file containing the tidy dataset. Currently set to "tidy_UCI_HAR_Dataset.txt" within dataDir.
-
-### Execution transcript
-
-> The following is a sample execution transcript.
-
-> source('run_analysis.R')
-> Step 0. Download and extract the raw data set.
-  >      Creating data directory: ./data
-   >     Downloading raw data file: ./data/UCI_HAR_Dataset.zip ...
-    >    Unzipping ./data/UCI_HAR_Dataset.zip to ./data/UCI HAR Dataset
-#####Step 1. Merges the training and the test sets to create one data set.
-> Read 7352 items
-> read 7352 items
-> Read 2947 items
-> Read 2947 items
-####Step 2. Extracts only the measurements on the mean and standard deviation for each measurement.
-####Step 3. Uses descriptive activity names to name the activities in the data set.
-####Step 4. Appropriately labels the data set with descriptive names.
-#### Step 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
+7. Check the generated tidydata.txt for output
