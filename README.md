@@ -21,14 +21,14 @@ The R script run_analysis.R downloads, if not already present, and processes the
 
 ###Usage
 
-Use the script by opening an R session and setting your working directory to the directory containing run_analysis.R. Then execute the script with the R command:
+> Use the script by opening an R session and setting your working directory to the directory containing run_analysis.R. Then execute the script with the R command:
 
-source('run_analysis.R')
+> source('run_analysis.R')
 
-The raw data and a tidy data set named tidy_UCI_HAR_Dataset.txt will be placed in the data subdirectory of the current working directory.
-Customization
+> The raw data and a tidy data set named tidy_UCI_HAR_Dataset.txt will be placed in the data subdirectory of the current working directory.
+> Customization
 
-A few variables at the top of the script can customized at your own risk.
+> A few variables at the top of the script can customized at your own risk.
 
    > dataUrl the URL of the raw UCI HAR dataset. Currently points to a cached copy provided by the course instructors.
     > dataDir the path to the data directory for storing raw and tidy datasets. Currently points to the "data" subdirectory of the current working directory when the script is executed.
@@ -39,7 +39,7 @@ A few variables at the top of the script can customized at your own risk.
 
  ###Execution transcript
 
-The following is a sample execution transcript.
+> The following is a sample execution transcript.
 
 > source('run_analysis.R')
 > Step 0. Download and extract the raw data set.
@@ -47,14 +47,14 @@ The following is a sample execution transcript.
    >     Downloading raw data file: ./data/UCI_HAR_Dataset.zip ...
     >    Unzipping ./data/UCI_HAR_Dataset.zip to ./data/UCI HAR Dataset
 #####Step 1. Merges the training and the test sets to create one data set.
->Read 7352 items
+> Read 7352 items
 > read 7352 items
 > Read 2947 items
 > Read 2947 items
 ####Step 2. Extracts only the measurements on the mean and standard deviation for each
-        measurement.
-> Step 3. Uses descriptive activity names to name the activities in the data set.
->Step 4. Appropriately labels the data set with descriptive names.
-> Step 5. Creates a second, independent tidy data set with the average of each
-        variable for each activity and each subject.
+        > measurement.
+####Step 3. Uses descriptive activity names to name the activities in the data set.
+####Step 4. Appropriately labels the data set with descriptive names.
+#### Step 5. Creates a second, independent tidy data set with the average of each
+       > variable for each activity and each subject.
 Done.
