@@ -1,4 +1,4 @@
- ##tidy-uci-har
+ ## tidy-uci-har
 
 The aim of tidy-uci-har is to create a tidy version of the UCI HAR dataset for the "Getting and Cleaning Data" course offered August 4-31, 2014 on Coursera.
 Files
@@ -8,7 +8,7 @@ Files
    > run_analysis.R the main analysis script performing the specified data tidying tasks.
    > tidy_UCI_HAR_Dataset.txt sample output from the run_analysis.R script included in the repository for completeness. Under normal circumstances, data itself would not be part of the repository.
 
-###Main Script
+###  Main Script
 
 The R script run_analysis.R downloads, if not already present, and processes the raw UCI HAR dataset as follows:
 
@@ -19,7 +19,7 @@ The R script run_analysis.R downloads, if not already present, and processes the
     > Step 4. Appropriately labels the data set with descriptive variable names.
     > Step 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-###Usage
+### Usage
 
 > Use the script by opening an R session and setting your working directory to the directory containing run_analysis.R. Then execute the script with the R command:
 
@@ -37,7 +37,7 @@ The R script run_analysis.R downloads, if not already present, and processes the
    > dateFile path to the file storing the download date and time for the data. Currently set to "dateDownloaded.txt" within dataDir.
    > tidyDataFile path to the output file containing the tidy dataset. Currently set to "tidy_UCI_HAR_Dataset.txt" within dataDir.
 
- ###Execution transcript
+ ### Execution transcript
 
 > The following is a sample execution transcript.
 
@@ -51,10 +51,8 @@ The R script run_analysis.R downloads, if not already present, and processes the
 > read 7352 items
 > Read 2947 items
 > Read 2947 items
-####Step 2. Extracts only the measurements on the mean and standard deviation for each
-        > measurement.
+####Step 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 ####Step 3. Uses descriptive activity names to name the activities in the data set.
 ####Step 4. Appropriately labels the data set with descriptive names.
-#### Step 5. Creates a second, independent tidy data set with the average of each
-       > variable for each activity and each subject.
-Done.
+#### Step 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
