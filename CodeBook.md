@@ -24,21 +24,12 @@ You should create one R script called run_analysis.R that does the following.
 	
 ##1. Get the data
 
-####1.1 Download the file and put the file in the data folder
+####1.1 Download the file manually from here
 
-> if(!file.exists("./data")){dir.create("./data")}
+
 > fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-> download.file(fileUrl,destfile="./data/Dataset.zip",method="curl")
 
 ####1.2 Unzip the file
-
-> unzip(zipfile="./data/Dataset.zip",exdir="./data")
-
-####1.3 unzipped files are in the folderUCI HAR Dataset. Get the list of the files
-
-> path_rf <- file.path("./data" , "UCI HAR Dataset")
-> files<-list.files(path_rf, recursive=TRUE)
-
 
 ##2. Read data from the files into the variables
 
